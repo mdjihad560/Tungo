@@ -1,0 +1,228 @@
+.tungo-shape-one {
+  position: absolute;
+  top: 35px;
+  left: 0;
+  z-index: -1;
+}
+.tungo-shape-right {
+  position: absolute;
+  top: 130px;
+  right: 0;
+  z-index: -1;
+}
+// shape v1
+.tungo-shape-top-left {
+  top: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+  @include max(991px) {
+    display: none;
+  }
+}
+.tungo-shape-bottom-right {
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+  @include max(991px) {
+    display: none;
+  }
+}
+// end v2
+
+.tungo-shape-two {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+// v3
+
+.tungo-shape-three {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: -1;
+  transform: translateY(-50%);
+}
+
+.tungo-shape-four {
+  position: absolute;
+  top: 80px;
+  left: 0;
+  z-index: -1;
+}
+.z-index{
+  z-index: 0;
+  position: relative;
+}
+.tungo-shape-five {
+  position: absolute;
+  top: 60px;
+  right: 0;
+  z-index: -1;
+}
+// v4
+
+.tungo-thumb-shape {
+  z-index: 0;
+  border-radius: 100%;
+  cursor: pointer;
+  position: absolute;
+  display: inline-flex;
+  &.shape-one{
+    top: 20%;
+    left: 25%;
+    &:hover .tungo-shape-content{
+      opacity: 1;
+    }
+  }
+  &.shape-two{
+    bottom: 40%;
+    left: 25%;
+    &:hover .tungo-shape-content{
+      opacity: 1;
+    }
+  }
+  &.shape-three{
+    bottom: 36%;
+    left: 49%;
+    &:hover .tungo-shape-content{
+      opacity: 1;
+    }
+  }
+  &.shape-four{
+    bottom: 38%;
+    right: 30%;
+    &:hover .tungo-shape-content{
+      opacity: 1;
+    }
+  }
+  &.shape-five{
+    top: 26%;
+    right: 18%;
+    &:hover .tungo-shape-content{
+      opacity: 1;
+    }
+  }
+  &::before, 
+  &:after {
+    content: " ";
+    position: absolute;
+    width: 70px;
+    height: 70px;
+    background: var(--accent-bg);
+    opacity: 0;
+    border-radius: 100%;
+    left: -20px;
+    top: -20px;
+    z-index: 0;
+    -webkit-animation: waves-animation 3s ease-in-out infinite;
+    animation: waves-animation 3s ease-in-out infinite;
+    z-index: -1;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  &::after{
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+}
+
+
+@keyframes waves-animation {
+  0% {
+      -webkit-transform: scale(0.2, 0.2);
+      transform: scale(0.2, 0.2);
+      opacity: 0;
+  }
+
+  50% {
+      opacity: 0.9;
+  }
+
+  100% {
+      -webkit-transform: scale(0.9, 0.9);
+      transform: scale(0.9, 0.9);
+      opacity: 0;
+  }
+}
+
+.tungo-shape-content{
+  left: 50%;
+  top: -100px;
+  opacity: 0;
+  white-space: nowrap;
+  padding: 20px 15px 15px;
+  border-radius: 5px;
+  position: absolute;
+  transition: all 0.4s;
+  transform: translateX(-50%);
+  background-color: var(--blue-bg);
+  h4{
+    color: var(--white-color);
+  }
+  &::before{
+    content: "";
+    left: 50%;
+    bottom: -14px;
+    width: 0;
+    height: 0;
+    position: absolute;
+    transform: translateX(-50%);
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 14px solid var(--blue-bg);
+  }
+
+}
+
+// End v5
+
+.tungo-shape-six{
+  top: 100px;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+}
+.tungo-shape-seven {
+  position: absolute;
+  top: 50px;
+  right: 0;
+  z-index: -1;
+}
+.tungo-shape-eight {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+}
+.tungo-shape-nine {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+// End v8
+
+
+.tungo-shape-bottom-left {
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  position: absolute;
+  @include max(991px) {
+    display: none;
+  }
+}
+.tungo-shape-top-right {
+  top: 0;
+  right: 0;
+  z-index: -1;
+  position: absolute;
+  @include max(991px) {
+    display: none;
+  }
+}
+// End about

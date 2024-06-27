@@ -1,0 +1,31 @@
+.tungo-cta{
+  &-section{
+    z-index: 0;
+    position: relative;
+    background-attachment: fixed;
+    &::before{
+      content: "";
+      left: 0;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      mix-blend-mode: multiply;
+      background: rgba(16, 44, 87, .8);
+    }
+  }
+  &-content{
+    max-width: 810px;
+    margin: 0 auto;
+    text-align: center;
+    span{
+      margin-bottom: 30px;
+      display: block;
+      text-transform: uppercase;
+    }
+    h2, span{
+      color: var(--white-color);
+    }
+  }
+}

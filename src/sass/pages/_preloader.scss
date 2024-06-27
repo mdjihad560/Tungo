@@ -1,0 +1,83 @@
+
+
+
+.tungo-preloader-wrap {
+  position: fixed;
+  z-index: 1222;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  background-color: var(--blue-bg);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.tungo-preloader {
+  display: inline-block;
+  position: relative;
+  width: 74px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.tungo-preloader div {
+  position: absolute;
+  top: 33px;
+  width: 13px;
+  height: 13px;
+  border-radius: 50%;
+  background: var(--accent-color);
+  animation-timing-function: cubic-bezier(0, 1, 1, 0);
+}
+
+.tungo-preloader div:nth-child(1) {
+  left: 8px;
+  animation: tungo-preloader1 0.6s infinite;
+}
+
+.tungo-preloader div:nth-child(2) {
+  left: 8px;
+  animation: tungo-preloader2 0.6s infinite;
+}
+
+.tungo-preloader div:nth-child(3) {
+  left: 32px;
+  animation: tungo-preloader2 0.6s infinite;
+}
+
+.tungo-preloader div:nth-child(4) {
+  left: 56px;
+  animation: tungo-preloader3 0.6s infinite;
+}
+
+@keyframes tungo-preloader1 {
+  0% {
+      transform: scale(0);
+  }
+
+  100% {
+      transform: scale(1);
+  }
+}
+
+@keyframes tungo-preloader3 {
+  0% {
+      transform: scale(1);
+  }
+
+  100% {
+      transform: scale(0);
+  }
+}
+
+@keyframes tungo-preloader2 {
+  0% {
+      transform: translate(0, 0);
+  }
+
+  100% {
+      transform: translate(24px, 0);
+  }
+}

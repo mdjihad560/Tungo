@@ -1,0 +1,724 @@
+.tungo-portfolio-column-right {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  @include max(767px) {
+    display: block;
+  }
+}
+
+.tungo-portfolio {
+  &-wrap{
+    display: grid;
+    grid-template-columns: 34% 1fr;
+    @include max(767px) {
+      display: block;
+    }
+  }
+  &-thumb{
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.8s;
+    &:before {
+      content: "";
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      transition: all 0.4s;
+      position: absolute;
+      background: linear-gradient(180deg, rgba(16, 44, 87, 0) 48%, #102C57 100%);
+    }
+    &:hover::before{
+      opacity: 1;
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.8s;
+      transform: scale(1.1);
+    }
+    &:hover img{
+      transform: scale(1);
+    }
+
+    &:hover .tungo-portfolio-link{
+      transform: translate(-50%, -50%) scale(1);
+    }
+  }
+  &-link{
+    left: 50%;
+    top: 50%;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    transition: all 0.6s;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--accent-bg);
+    transform: translate(-50%, -50%) scale(0);
+    @include max(991px) {
+      width: 60px;
+      height: 60px;
+    }
+    img{
+      width: auto;
+      height: auto;
+      @include max(991px) {
+        width: 30px;
+      }
+    }
+    
+  }
+  
+}
+
+a.tungo-portfolio-thumb{
+  display: block;
+}
+
+// end v1
+
+.tungo-properties{
+  &-wrap{
+    margin-bottom: 60px;
+    @include max(991px) {
+      margin-bottom: 40px;
+    }
+    &:hover .tungo-properties-thumb img{
+      transform: scale(1);
+    }
+  }
+  &-thumb{
+    overflow: hidden;
+    border-radius: 5px;
+    margin-bottom: 24px;
+    position: relative;
+    img{
+      transition: all 0.8s;
+      transform: scale(1.1);
+    }
+  }
+  &-details{
+    gap: 24px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    h4{
+      span{
+        font-size: 18px;
+      }
+    }
+  }
+  &-border{
+    height: 1px;
+    width: 100%;
+    margin: 24px 0;
+    background-color: rgba(16, 44, 87, .1);
+  }
+  &-list{
+    ul{
+      gap: 24px;
+      display: flex;
+      flex-wrap: wrap;
+      li{
+        font-weight: 700;
+        align-items: center;
+        display: inline-flex;
+        font-family: $heading-font;
+        img{
+          margin-right: 10px;
+        }
+      }
+    }
+    p{
+      font-weight: 700;
+      letter-spacing: -.5px;
+      font-family: $heading-font;
+    }
+  }
+}
+.tungo-properties-btn{
+  &-wrap{
+    top: 24px;
+    left: 24px;
+    gap: 24px;
+    display: flex;
+    position: absolute;
+  }
+  z-index: 0;
+  overflow: hidden;
+  position: relative;
+  padding: 13px 30px;
+  border-radius: 3px;
+  display: inline-block;
+  color: var(--body-color);
+  background-color: var(--accent-bg);
+  &:hover{
+    color: var(--accent-color);
+  }
+  &::before{
+    transition-duration: 800ms;
+    position: absolute;
+    width: 200%;
+    height: 200%;
+    content: "";
+    top: 110%;
+    left: 50%;
+    background-color: #0D121E;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    border-radius: 50%;
+    z-index: -1;
+  }
+  &:hover:before{
+    top: -40%;
+  }
+  &.apartment{
+    color: var(--accent-color);
+    background-color: var(--blue-bg);
+  }
+}
+
+.tungo-center-btn {
+  text-align: center;
+  margin-top: 20px;
+  @include max(991px) {
+    margin-top: 0;
+  }
+}
+// End v2
+
+.tungo-properties{
+  &-wrap2{
+    margin-bottom: 24px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: var(--off-white-bg);
+    &:hover .tungo-properties-thumb2 img{
+      transform: scale(1);
+    }
+  }
+  &-thumb2{
+    overflow: hidden;
+    position: relative;
+    img{
+      transition: all 0.8s;
+      transform: scale(1.1);
+    }
+  }
+  &-data2{
+    padding: 24px;
+  }
+
+}
+// End v3
+.tungo-gallery-slider-nav {
+  .tungo-gallery-slider-thumb{
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.4s;
+    // border: 5px solid var(--white-color);
+}
+.slick-slide.slick-current.slick-active.slick-center{
+  .tungo-gallery-slider-thumb{
+    border: 5px solid var(--heading-color);
+  }
+}
+}
+
+.tungo-gallery-slider .tungo-gallery-next, 
+.tungo-gallery-slider .tungo-gallery-prev {
+  width: 80px;
+  height: 80px;
+  left: 10px;
+  top: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  transition: all .4s;
+  transform: translateY(-50%);
+  background-color: rgba(16, 44, 87, .5);
+  img{
+    width: 30px;
+  }
+  @include max(1199px) {
+    width: 60px;
+    height: 60px;
+    background-size: 25px;
+  }
+  @include max(767px) {
+    display: none!important;
+  }
+}
+.tungo-gallery-slider .tungo-gallery-next:hover, 
+.tungo-gallery-slider .tungo-gallery-prev:hover{
+  background-color: var(--blue-bg);
+}
+.tungo-gallery-slider .tungo-gallery-prev{
+  left: auto;
+  right: 10px;
+}
+.tungo-gallery-slider .slick-slide {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.tungo-gallery-slider .slick-slide, 
+.tungo-gallery-slider-nav .slick-slide{
+  padding: 10px;
+}
+
+// start v4
+
+.tungo-properties{
+  &-wrap3{
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: var(--off-white-bg);
+    &:hover .tungo-properties-thumb3 img{
+      transform: scale(1);
+    }
+  }
+  &-thumb3{
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+    &:before {
+      content: "";
+      left: 0;
+      z-index: 1;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: linear-gradient(180deg, rgba(16, 44, 87, 0) 48%, #102C57 100%);
+    }
+    img{
+      transition: all 0.8s;
+      transform: scale(1.1);
+    }
+  }
+  &-title{
+    left: 24px;
+    bottom: 20px;
+    z-index: 2;
+    position: absolute;
+    h4{
+      color: var(--white-color);
+    }
+  }
+  &-data3{
+    padding: 24px;
+  }
+
+}
+
+.tungo-properties-btn.position-right {
+  z-index: 3;
+  top: 20px;
+  right: 20px;
+  position: absolute;
+}
+
+.tungo-properties-slider{
+  .slick-slide{
+    margin-right: 24px;
+    @include max(575px) {
+      margin-right: 0;
+    }
+  }
+}
+
+.tungo-properties-slider2{
+  .slick-slide{
+    margin-right: 24px;
+    @include max(575px) {
+      margin-right: 0;
+    }
+  }
+}
+
+
+.tungo-properties-slider .tungo-properties-next, 
+.tungo-properties-slider .tungo-properties-prev {
+  width: 60px;
+  height: 60px;
+  right: 100px;
+  top: -30%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  transition: all .4s;
+  border: 1px solid var(--body-color);
+  @include max(991px) {
+    display: none!important;
+  }
+}
+.tungo-properties-slider .tungo-properties-next:hover, 
+.tungo-properties-slider .tungo-properties-prev:hover{
+  background-color: var(--accent-bg);
+  border: 1px solid var(--accent-color);
+}
+.tungo-properties-slider .tungo-properties-prev{
+  right: 20px;
+}
+
+
+.tungo-portfolio {
+  &-wrap2{
+    margin-bottom: 24px;
+  }
+  &-thumb2{
+    z-index: 0;
+    border-radius: 5px;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.8s;
+    &:before {
+      content: "";
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s;
+      position: absolute;
+      mix-blend-mode: multiply;
+      background: linear-gradient(180deg, rgba(16, 44, 87, 0) 48%, #102C57 100%);
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.8s;
+      transform: scale(1.1);
+    }
+    &:hover img{
+      transform: scale(1);
+    }
+
+   
+  }
+  &-title{
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    padding: 24px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h4{
+      padding-right: 15px;
+      color: var(--white-color);
+    }
+    img{
+      width: 24px;
+    }
+  }
+
+  
+}
+
+a.tungo-portfolio-thumb2 {
+  display: block;
+}
+// End v4
+
+.tungo-portfolio {
+  &-wrap3{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @include max(1199px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include max(767px) {
+      display: block;
+    }
+  }
+  &-thumb3{
+    z-index: 0;
+    overflow: hidden;
+    position: relative;
+    transition: all 0.8s;
+    &:before {
+      content: "";
+      left: 0;
+      bottom: 0;
+      z-index: 1;
+      width: 100%;
+      height: 100%;
+      transition: all 0.4s;
+      position: absolute;
+      mix-blend-mode: multiply;
+      background: linear-gradient(180deg, rgba(16, 44, 87, 0) 0%, #102C57 100%);
+
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.8s;
+      transform: scale(1.1);
+    }
+    &:hover img{
+      transform: scale(1);
+    }
+
+   
+  }
+  &-title2{
+    z-index: 1;
+    bottom: 0;
+    width: 100%;
+    padding: 24px;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    h4{
+      color: var(--white-color);
+    }
+  }
+
+  
+}
+
+a.tungo-portfolio-thumb3{
+  display: block;
+}
+
+// End v7
+
+.tungo-properties-slider3{
+  .slick-slide{
+    margin-right: 24px;
+    @include max(575px) {
+      margin-right: 0;
+    }
+  }
+  .slick-dots  {
+    display: flex;
+    justify-content: center;
+    list-style-type: none;
+    margin-top: 50px;
+    li{
+      margin: 0 20px;
+      &.slick-active{
+        button{
+          background-color: var(--white-bg);
+          &::before{
+            transform: translate(-50%, -50%) scale(1);
+          }
+        }
+      }
+    }
+    button{
+      display: block;
+      width: 8px;
+      height: 8px;
+      padding: 0;
+      border: none;
+      border-radius: 100%;
+      background: rgba(254, 250, 246, .2);
+      text-indent: -9999px;
+      transition: all .4s;
+      position: relative;
+      &:before {
+        content: "";
+        left: 50%;
+        top: 50%;
+        width: 30px;
+        height: 30px;
+        transition: all 0.4s;
+        position: absolute;
+        border-radius: 100px;
+        border: 1px solid var(--white-bg);
+        transform: translate(-50%, -50%) scale(0);
+      }
+    }
+    
+}
+}
+
+// end v9
+
+.tungo-properties-single-item{
+  margin-bottom: 50px;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  @include max(991px) {
+    margin-bottom: 30px;
+  }
+  h3{
+    margin-bottom: 15px;
+  }
+  p{
+    span{
+      font-weight: 700;
+      font-size: 20px;
+      font-family: $heading-font;
+    }
+  }
+}
+// End single
+
+.tungo-apartments-heading{
+  .tungo-tab-buttons{
+    margin-bottom: 60px;
+  }
+  .tungo-hero-dropdown {
+    margin-left: 60px;
+    @include max(991px) {
+      margin: 0 0 30px;
+    }
+}
+}
+// End apartment plan
+
+
+.tungo-gallery-slider2 .tungo-gallery-next2, 
+.tungo-gallery-slider2 .tungo-gallery-prev2 {
+  width: 80px;
+  height: 80px;
+  left: 260px;
+  top: 50%;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: absolute;
+  transition: all .4s;
+  transform: translateY(-50%);
+  background-color: rgba(16, 44, 87, .5);
+  img{
+    width: 30px;
+  }
+  @include max(1599px) {
+    left: 160px;
+  }
+  @include max(991px) {
+    left: 111px;
+  }
+  @include max(1199px) {
+    width: 60px;
+    height: 60px;
+    background-size: 25px;
+  }
+  @include max(767px) {
+    display: none!important;
+  }
+}
+.tungo-gallery-slider2 .tungo-gallery-next2:hover, 
+.tungo-gallery-slider2 .tungo-gallery-prev2:hover{
+  background-color: var(--blue-bg);
+}
+.tungo-gallery-slider2 .tungo-gallery-prev2{
+  left: auto;
+  right: 260px;
+  @include max(1599px) {
+    right: 160px;
+  }
+  @include max(991px) {
+    right: 111px;
+  }
+}
+.tungo-gallery-slider2 .slick-slide {
+  -webkit-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+.tungo-gallery-slider2 .slick-slide{
+  padding: 10px;
+}
+.tungo-apartment-details{
+  margin-top: 14px;
+  .tungo-properties-details{
+    margin-bottom: 50px;
+  }
+}
+// end apartment details
+
+
+.tungo-portfolio-menu {
+  max-width: 856px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  border-bottom: 3px solid rgba(16, 44, 87, 0.1);
+  @include max(767px) {
+    border: 0;
+  }
+  ul{
+    display: flex;
+    justify-content: space-between;
+    @include max(767px) {
+      display: block;
+    }
+    li{
+      cursor: pointer;
+      font-weight: 700;
+      padding-bottom: 24px;
+      display: inline-block;
+      color: var(--heading-color);
+      position: relative;
+     @include max(991px) {
+      font-size: 16px;
+     }
+      @include max(767px) {
+        display: block;
+        text-align: center;
+        padding-bottom: 15px;
+        margin-bottom: 15px;
+        border-bottom: 3px solid #E7E7E8;
+      }
+      &:before {
+        content: "";
+        left: 0;
+        bottom: -2px;
+        width: 0;
+        height: 3px;
+        transition: all 0.4s;
+        position: absolute;
+        background-color: var(--heading-color);
+      }
+      &.active::before{
+        width: 100%;
+      }
+    }
+   }
+}
+
+
+.tungo-portfolio-menu ul li:first-child{
+  margin-left: 0;
+}
+.tungo-portfolio-menu ul li:last-child{
+  margin-right: 0;
+}
+.tungo-portfolio-menu ul li.active{
+  position: relative;
+  transition: all 0.4s;
+}
+
+.collection-grid-item-w2 {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+.mfp-title{
+  display: none;
+}

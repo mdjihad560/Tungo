@@ -1,0 +1,63 @@
+.tungo-brand{
+  &-wrap{
+    max-width: 600px;
+    margin-top: 80px;
+    @include max(1500px) {
+      margin-top: 50px;
+    }
+    @include max(991px) {
+      margin-top: 30px;
+    }
+
+    h6{
+      padding-bottom: 24px;
+      margin-bottom: 24px;
+      color: var(--white-color);
+      border-bottom: 1px solid rgba(254, 250, 246, .1);
+    }
+  }
+  &-column{
+    display: flex;
+    flex-flow: wrap;
+    row-gap: 30px;
+    column-gap: 70px;
+    @include max(1399px) {
+      column-gap: 50px;
+    }
+    @include max(991px) {
+      column-gap: 30px;
+      justify-content: center;
+    }
+  }
+}
+
+// End v3
+
+.tungo-brand-slider{
+  padding-bottom: 80px;
+  @include max(991px) {
+    margin-top: 60px;
+  }
+  &-column{
+    padding-bottom: 80px;
+    @include max(991px) {
+      padding-bottom: 60px;
+    }
+  }
+  &-title{
+    h4{
+      text-align: center;
+      margin-bottom: 50px;
+      color: var(--white-color);
+    }
+    &.dark-color{
+      h4{
+        color: var(--heading-color);
+      }
+    }
+  }
+  
+  
+}
+
+// end v8

@@ -1,0 +1,150 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Mortgage Calculator" %}
+ {% block content %}
+
+{% include "../templates/layout/header-footer/main-header.html" %} 
+
+<div class="breadcumb-wrapper" style="background-image: url(assets/images/breadcrumb/breadcrumb.png)">
+  <div class="container">
+    {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+  </div>
+</div>
+<!-- End breadcrumb -->
+
+<div class="section tungo-section-padding">
+  <div class="container">
+    <div class="tungo-section-title center large">
+      <h2>Determine your mortgage rate in simple steps</h2>
+    </div>
+    <div class="row">
+      <div class="col-xl-6 col-lg-6">
+        <div class="tungo-range-slider-wrap">
+          <div class="tungo-slider-item">
+            <div class="tungo-range-content">
+              <h4>Property Price:</h4>
+              <span id="range-output"></span>
+            </div>
+            <input type="range" value="3500000" min="3500000" max="9500000" id="tungo-slider-range">
+          </div>
+
+          <div class="tungo-slider-item">
+            <div class="tungo-range-content">
+              <h4>Down Payment:</h4>
+              <span id="range-output2"></span>
+            </div>
+            <input type="range" value="2350000" min="2350000" max="8350000" id="tungo-slider-range2">
+          </div>
+
+          <div class="tungo-slider-item">
+            <div class="tungo-range-content">
+              <h4>Length of Loan:</h4>
+              <div class="tungo-rang-year">
+                <span id="range-output3"></span>
+                <h4>year</h4>
+              </div>
+            </div>
+            <input type="range" value="5" min="5" max="10" id="tungo-slider-range3">
+          </div>
+
+          <div class="tungo-slider-item">
+            <div class="tungo-range-content">
+              <h4>Interest Rate:</h4>
+              <div class="tungo-rang-year">
+                <span id="range-output4"></span>
+                <h4>%</h4>
+              </div>
+            </div>
+            <input type="range" value="8" min="8" max="20" id="tungo-slider-range4">
+          </div>
+       
+        </div>
+      </div>
+      <div class="col-xl-5 offset-xl-1 col-lg-6">
+        <div class="tungo-range-box">
+          <img src="assets/images/breadcrumb/logo.png" alt="">
+          <div class="tungo-range-price-box">
+            <div class="tungo-range-price">
+              <h4>$250.00</h4>
+              <p>Monthly Payment</p>
+            </div>
+            <div class="tungo-range-des">
+              <p>*Estimated monthly rates. Please contact us for more information.</p>
+            </div>
+          </div>
+          <a class="tungo-default-btn d-block" href="">Register Interest</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <div class="tungo-diverder"></div>
+</div>
+<!-- End section -->
+
+<div class="section tungo-section-padding">
+  <div class="container">
+    <div class="row">
+      <div class="col-xl-6 col-lg-6">
+        <div class="tungo-default-content">
+          <h2>Get answers to all your questions</h2>
+          <p>We understand that you are considering our residential complex, so we have created a collection of frequently asked questions.</p>
+          <div class="tungo-extra-mt">
+            <a class="tungo-default-btn" href="contact-02.html">Get In Touch</a>
+          </div>
+        </div>
+      </div>
+      <div class="col-xl-5 col-lg-6 offset-xl-1">
+        <div class="tungo-accordion-wrap2 init-wrap responsive-mt40">
+            <div class="tungo-accordion-item2 open">
+              <div class="tungo-accordion-header2 init-header">
+                <h4>Do you assist property management?</h4>
+              </div>
+              <div class="tungo-accordion-body2 init-body">
+                <p>Yes, we prioritize resident safety with security measures including controlled access, surveillance cameras, and possibly onsite security personnel.</p>
+              </div>
+            </div>
+            <div class="tungo-accordion-item2">
+              <div class="tungo-accordion-header2 init-header">
+                <h4>How are your agents compensated?</h4>
+              </div>
+              <div class="tungo-accordion-body2 init-body">
+                <p>Embrace indoor-outdoor living with a sprawling outdoor living space, featuring lush landscaping.</p>
+              </div>
+            </div>
+            <div class="tungo-accordion-item2">
+              <div class="tungo-accordion-header2 init-header">
+                <h4>What sets our agency apart from others?</h4>
+              </div>
+              <div class="tungo-accordion-body2 init-body">
+                <p>Unwind and rejuvenate in a spa-like bathroom retreat, complete with a luxurious soaking tub.</p>
+              </div>
+            </div>
+            <div class="tungo-accordion-item2">
+              <div class="tungo-accordion-header2 init-header">
+                <h4>How do we help find the right property?</h4>
+              </div>
+              <div class="tungo-accordion-body2 init-body">
+                <p>Our lease terms and rental rates vary based on unit size, location, and amenities. Please contact us for specific details and availability.</p>
+              </div>
+            </div>
+
+            <div class="tungo-accordion-item2">
+              <div class="tungo-accordion-header2 init-header">
+                <h4>What areas do you serve?</h4>
+              </div>
+              <div class="tungo-accordion-body2 init-body">
+                <p>Monitoring of security alarm systems, including intrusion detection, fire alarms, and cameras.</p>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- End section -->
+
+{% include "../templates/layout/header-footer/main-footer.html" %} 
+  
+{% endblock %}

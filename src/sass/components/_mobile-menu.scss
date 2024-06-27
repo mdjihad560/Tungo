@@ -1,0 +1,227 @@
+.tungo-menu-wrapper {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.60);
+  z-index: 999999;
+  width: 100%;
+  height: 100%;
+  transition: all ease 0.8s;
+  opacity: 0;
+  visibility: hidden;
+
+
+  // Mobile Menu Logo
+  .mobile-logo {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-right: 24px;
+    display: block;
+    text-align: left;
+    padding-left: 24px;
+    background-color: var(--white-bg);
+
+    svg {
+      max-width: 185px;
+    }
+  }
+
+  // Menu Close Button
+  .tungo-menu-toggle {
+    border: none;
+    position: absolute;
+    right: 24px;
+    top: 30px;
+    padding: 0;
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    font-size: 18px;
+    z-index: 1;
+    color: var(--white-color);
+    background-color: var(--heading-color);
+    border-radius: 50%;
+
+    &:hover {
+      background-color: var(--heading-color);
+      color: var(--white-color);
+    }
+  }
+
+  .tungo-menu-area {
+    width: 100%;
+    max-width: 310px;
+    background-color: var(--white-bg);
+    border-right: 3px solid var(--heading-color);
+    height: 100%;
+    position: relative;
+    left: -110%;
+    opacity: 0;
+    visibility: hidden;
+    transition: all ease 1s;
+    z-index: 1;
+  }
+
+  &.tungo-body-visible {
+    opacity: 1;
+    visibility: visible;
+
+    .tungo-menu-area {
+      left: 0;
+      opacity: 1;
+      visibility: visible;
+    }
+  }
+}
+
+
+// Mobile Menu
+.tungo-mobile-menu {
+  overflow-y: scroll;
+  max-height: calc(100vh - 200px);
+  padding-bottom: 40px;
+  margin-top: 33px;
+  text-align: left;
+
+  &::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(#E8063C, 0.2);
+    background-color: #000;
+  }
+
+  &::-webkit-scrollbar {
+    width: 6px;
+    background-color: #000;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background-color: var(--heading-color);
+  }
+
+  ul {
+    margin: 0;
+    padding: 0 0;
+
+    li {
+      border-bottom: 1px solid var(--heading-color);
+      list-style-type: none;
+
+      li:first-child {
+        border-top: 1px solid var(--heading-color);
+      }
+
+      a {
+        display: block;
+        position: relative;
+        padding: 15px 0;
+        line-height: 1;
+        font-size: 16px;
+        text-transform: capitalize;
+        color: var(--heading-color)!important;
+        font-weight: 700;
+    
+      }
+
+      &.tungo-active {
+        >a {
+          color: var(--accent-color);
+
+          &:before {
+            transform: rotate(90deg);
+          }
+        }
+      }
+
+      ul {
+        li {
+          padding-left: 15px;
+
+          &:last-child {
+            border-bottom: none;
+          }
+        }
+      }
+    }
+
+    .tungo-item-has-children {
+      >a {
+        .tungo-mean-expand {
+          position: absolute;
+          right: 0;
+          top: 50%;
+          font-weight: 400;
+          font-size: 12px;
+          width: 25px;
+          height: 25px;
+          line-height: 25px;
+          margin-top: -12.5px;
+          display: inline-block;
+          text-align: center;
+          background-color: var(--heading-color);
+          color: var(--white-color);
+          box-shadow: 0 0 20px -8px rgba(#E8063C, 0.5);
+          border-radius: 50%;
+          transition: all ease 0.4s;
+
+          &:before {
+            content: "\ea13";
+            font-family: 'remixicon' !important;
+          }
+        }
+      }
+      
+      &.tungo-active {
+        >a {
+          .tungo-mean-expand {
+            background-color: var(--accent-bg);
+            color: var(--heading-color);
+
+            &:before {
+              content: "\f1af";
+            }
+          }
+        }
+      }
+    }
+  }
+
+  >ul {
+    padding: 0 24px;
+
+    >li {
+      &:last-child {
+        border-bottom: none;
+      }
+    }
+  }
+}
+
+
+
+.tungo-menu-toggle {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  font-size: 24px;
+  border: none;
+  background-color: var(--accent-bg);
+  color: var(--heading-color);
+  display: inline-block;
+  border-radius: 50%;
+  &.dark-toggle{
+    color: var(--accent-color);
+    background-color: var(--blue-bg);
+  }
+}
+
+
+@media (max-width: 400px) {
+  .tungo-menu-wrapper .tungo-menu-area {
+    width: 100%;
+    max-width: 270px;
+  }
+
+  .tungo-mobile-menu>ul {
+    padding: 0 20px;
+  }
+}

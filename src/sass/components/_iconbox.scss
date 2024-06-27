@@ -1,0 +1,272 @@
+.bg-cover{
+  background-size: cover;
+  background-position: center;
+}
+
+.tungo-iconbox{
+  &-column{
+    column-gap: 100px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    @include max(1199px) {
+      grid-template-columns: 1fr 1fr;
+    }
+    @include max(767px) {
+      display: block;
+    }
+  }
+  &-wrap{
+    position: relative;
+    margin-bottom: 40px;
+    &:hover .hover-icon{
+      transform: translateX(0px);
+    }
+    &:hover .normal-icon{
+      transform: translateX(24px);
+    }
+    &:before{
+      content: " ";
+      right: -50px;
+      top: 50%;
+      width: 1px;
+      height: 78%;
+      position: absolute;
+      transform: translateY(-50%);
+      background-color: var(--accent-color);
+    }
+    &:last-child:before{
+      content: none;
+    }
+    &:nth-child(3)::before{
+      content: none;
+    }
+    @include max(1199px) {
+      &::before{
+        content: none;
+      }
+    }
+    @include max(767px) {
+      &:before{
+        content: none;
+      }
+    }
+  }
+  &-icon{
+    margin-bottom: 30px;
+  }
+  &-data{
+    h4{
+      margin-bottom: 15px;
+    }
+    p{
+      margin-bottom: 30px;
+      @include max(991px) {
+        margin-bottom: 24px;
+      }
+    }
+  }
+  &-btn{
+    display: flex;
+    width: 24px;
+    height: 28px;
+    overflow: hidden;
+    position: relative;
+    .normal-icon{
+      position: absolute;
+      transition: all 0.3s;
+      transform: translateX(0px);
+    }
+    .hover-icon {
+      position: relative;
+      transition: all 0.3s;
+      transform: translateX(-24px);
+      path{
+        fill: var(--accent-color);
+      }
+    }
+  }
+  
+}
+
+// End v2
+
+.tungo-iconbox{
+  &-column2{
+    column-gap: 114px;
+    row-gap: 80px;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr 1fr;
+    @include max(991px) {
+      grid-template-columns: 1fr 1fr;
+      column-gap: 40px;
+      row-gap: 40px;
+    }
+    @include max(767px) {
+      grid-template-columns: 1fr;
+    }
+  }
+  &-icon2{
+    margin-bottom: 30px;
+  }
+  &-data2{
+    h4{
+      margin-bottom: 15px;
+      color: var(--white-color);
+    }
+    p{
+      color: var(--white-color);
+    }
+  }
+  &-border1{
+    top: 50%;
+    height: 1px;
+    width: 100%;
+    position: absolute;
+    transform: translateY(-50%);
+    background-color: rgba(234, 219, 200, .1);
+    @include max(991px) {
+      display: none;
+    }
+  }
+  &-border2{
+    left: 32%;
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    background-color: rgba(234, 219, 200, .1);
+    @include max(991px) {
+      display: none;
+    }
+  }
+  &-border3{
+    right: 32%;
+    height: 100%;
+    width: 1px;
+    position: absolute;
+    background-color: rgba(234, 219, 200, .1);
+    @include max(991px) {
+      display: none;
+    }
+  }
+}
+// End v3
+
+.tungo-iconbox{
+  &-wrap3{
+    gap: 24px;
+    display: flex;
+    padding-top: 10px;
+    margin-bottom: 60px;
+    padding-left: 24px;
+    transition: all 0.4s;
+    border-left: 3px solid rgba(234, 219, 200, .9);
+    @include max(991px) {
+      margin-bottom: 30px;
+    }
+    &:hover{
+      border-left: 3px solid var(--heading-color);
+    }
+    &:last-child{
+      margin-bottom: 0;
+    }
+  }
+  &-icon3{
+    flex-shrink: 0;
+  }
+  &-data3{
+    h3{
+      margin-bottom: 15px;
+    }
+  }
+}
+// End v4
+
+.tungo-floor-plan{
+  &-wrap{
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 24px;
+    position: relative;
+    transition: all 0.4s;
+    &:hover{
+      background-color: var(--white-bg);
+      box-shadow: 0px 4px 80px 0px rgba(16, 44, 87, 0.08);
+      
+    }
+    .tungo-properties-list ul{
+      justify-content: center;
+    }
+  }
+  &-thumb{
+    margin-bottom: 30px;
+  }
+  &-data{
+    h4{
+      margin-bottom: 24px;
+    }
+  }
+}
+// End v6
+.tungo-iconbox-rightside{
+  @include max(991px) {
+    margin-top: 40px;
+  }
+  @include max(991px) {
+    .tungo-iconbox-wrap{
+      text-align: center;
+    }
+  }
+}
+// End v7
+
+
+.tungo-iconbox{
+  &-wrap4{
+    padding: 24px 12px 24px 22px;
+    border-radius: 3px;
+    margin-bottom: 24px;
+    transition: all 0.4s;
+    background-color: var(--off-white-bg);
+    &.light-color{
+      background-color: var(--blue-bg);
+      .tungo-iconbox-data4{
+        h4, p{
+          color: var(--white-color);
+        }
+      }
+    }
+  }
+  &-icon4{
+    margin-bottom: 30px;
+  }
+  &-data4{
+    h4{
+      margin-bottom: 15px;
+    }
+  }
+}
+// End v8
+
+
+
+.tungo-iconbox{
+  &-wrap5{
+    padding: 24px;
+    display: flex;
+    gap: 15px;
+    border-radius: 5px;
+    margin-bottom: 24px;
+    transition: all 0.4s;
+    background-color: var(--off-white-bg);
+  }
+  &-icon5{
+    flex-shrink: 0;
+  }
+  &-data5{
+    h4{
+      margin-bottom: 15px;
+    }
+  }
+}
+// End v10

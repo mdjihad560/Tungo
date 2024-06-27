@@ -1,0 +1,187 @@
+#map{
+  width: 100%;
+  height: 636px;
+  @include max(991px) {
+    height: 500px;
+  }
+  @include max(767px) {
+    height: 300px;
+  }
+}
+.tungo-form{
+  &-wrap{
+    padding: 40px 30px;
+    border-radius: 5px;
+    border: 1px solid var(--accent-color);
+    @include max(991px) {
+      padding: 30px;
+    }
+  }
+  &-field{
+    margin-bottom: 24px;
+    input, textarea{
+      background-color: var(--white-bg);
+    }
+    label{
+      font-size: 28px;
+      display: block;
+      font-weight: 700;
+      margin-bottom: 15px;
+      font-family: $heading-font;
+    }
+  }
+}
+
+
+// Start v3
+.tungo-location{
+  &-section{
+    height: 800px;
+    position: relative;
+    &::before{
+      content: "";
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background: linear-gradient(99.85deg, rgba(16, 44, 87, 0.3) 0%, rgba(16, 44, 87, 0.7) 100%);
+    }
+  }
+  &-wrap{
+    position: absolute;
+    &.position-one{
+      right: 50px;
+      top: 15%;
+    }
+    &.position-two{
+      top: 40%;
+      right: 25%;
+    }
+    &.position-three{
+      top: 100px;
+      right: 37%;
+    }
+    &.position-four{
+      bottom: 140px;
+      left: 31%;
+    }
+    &.position-five{
+      top: 30%;
+      left: 17%;
+    }
+    &:hover .tungo-location-number-box{
+      background-color: var(--accent-bg);
+    }
+  }
+  &-number{
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    padding: 14px;
+    text-align: center;
+    cursor: pointer;
+    position: absolute;
+    border-radius: 100px;
+    transition: all 0.4s;
+    bottom: -70px;
+    background-color: var(--white-bg);
+    transform: translateX(-50%);
+    h4{
+      line-height: 1;
+    }
+    &:hover + .tungo-location-deatils{
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0px);
+    }
+    &::before, 
+    &:after {
+    content: " ";
+    position: absolute;
+    width: 85px;
+    height: 85px;
+    background: var(--white-bg);
+    opacity: 0;
+    border-radius: 100%;
+    left: -18px;
+    top: -18px;
+    z-index: 0;
+    -webkit-animation: waves-animation 3s ease-in-out infinite;
+    animation: waves-animation 3s ease-in-out infinite;
+    z-index: -1;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+  }
+  &::after{
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+  }
+  }
+  &-deatils{
+    opacity: 0;
+    visibility: hidden;
+    gap: 24px;
+    z-index: 99;
+    display: flex;
+    padding: 24px;
+    position: relative;
+    border-radius: 5px;
+    transition: all 0.7s;
+    transform: translateY(-15px);
+    background-color: var(--blue-bg);
+    &:before {
+      content: "";
+      left: 50%;
+      bottom: -20px;
+      width: 0;
+      height: 0;
+      position: absolute;
+      transform: translateX(-50%);
+      border-left: 12px solid transparent;
+      border-right: 12px solid transparent;
+      border-top: 20px solid var(--blue-bg);
+    }
+  }
+  &-map{
+    flex-shrink: 0;
+  }
+  &-data{
+    h4{
+      margin-bottom: 5px;
+      color: var(--white-color);
+    }
+    p{
+      font-weight: 700;
+      color: var(--white-color);
+    }
+  }
+
+}
+// End v3
+
+.tungo-agent{
+  &-wrap{
+    padding: 40px;
+    border-radius: 5px;
+    background-color: var(--off-white-bg);
+    @include max(991px) {
+      padding: 30px;
+      margin-bottom: 40px;
+    }
+    .tungo-contact-info{
+      padding: 24px 0 0 24px;
+    }
+  }
+  &-thumb{
+    overflow: hidden;
+    border-radius: 5px;
+  }
+  &-data{
+    padding: 24px 0px 24px 24px;
+    border-bottom: 1px solid var(--accent-color);
+    h4{
+      margin-bottom: 5px;
+    }
+  }
+}

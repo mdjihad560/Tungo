@@ -1,0 +1,341 @@
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="url"],
+input[type="tel"],
+input[type="time"],
+input[type="date"],
+input[type="search"],
+input, textarea {
+  margin: 0;
+  width: 100%;
+  height: 60px;
+  font-weight: 400;
+  color:var(--heading-color);
+  border-radius: 3px;
+  background-color: transparent;
+  padding: 15px 24px;
+  border: none;
+  transition: all 0.4s;
+  border: 1px solid var(--accent-color);
+}
+input:focus, 
+textarea:focus{
+   border: 1px solid var(--heading-color)!important;
+}
+textarea {
+  height: 180px;
+  resize: none;
+  @include max(767px) {
+    height: 100px;
+  }
+}
+
+input::-webkit-input-placeholder, 
+textarea::-webkit-input-placeholder{ /* WebKit, Blink, Edge */
+    color:    var(--heading-color);
+    opacity: 1;
+}
+input:-moz-placeholder, 
+textarea:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+   color:    var(--heading-color);
+   opacity:  1;
+}
+input::-moz-placeholder, 
+textarea::-moz-placeholder{ /* Mozilla Firefox 19+ */
+   color:    var(--heading-color);
+   opacity:  1;
+}
+input:-ms-input-placeholder, 
+textarea:-ms-input-placeholder{ /* Internet Explorer 10-11 */
+   color:    var(--heading-color);
+   opacity: 1;
+}
+input::-ms-input-placeholder, 
+textarea::-ms-input-placeholder{ /* Microsoft Edge */
+   color:    var(--heading-color);
+   opacity: 1;
+}
+
+input::placeholder, 
+textarea::placeholder{ /* Most modern browsers support this now. */
+   color:    var(--heading-color);
+   opacity: 1;
+}
+
+// end default
+.tungo-subscription-one{
+   input{
+      height: 50px;
+      color: var(--white-color);
+      border: 1px solid var(--white-color)!important;
+      &::-webkit-input-placeholder{ /* WebKit, Blink, Edge */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+      &:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+         color:    var(--white-color);
+         opacity:  1;
+      }
+      &::-moz-placeholder{ /* Mozilla Firefox 19+ */
+         color:    var(--white-color);
+         opacity:  1;
+      }
+      &:-ms-input-placeholder{ /* Internet Explorer 10-11 */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+      &::-ms-input-placeholder{ /* Microsoft Edge */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+
+      input::placeholder{ /* Most modern browsers support this now. */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+   }
+   
+}
+button#tungo-subscription-btn{
+   width: 100%;
+   padding: 13px;
+   margin-top: 12px;
+}
+// End one
+
+.tungo-subscription-two{
+   display: flex;
+   max-width: 570px;
+   margin: 0 auto;
+   gap: 24px;
+   @include max(767px){
+      display: block;
+   }
+   button#tungo-subscription-btn {
+      flex: 0 0 170px;
+      padding: 18px;
+      margin-top: 0;
+      @include max(767px){
+         margin-top: 20px;
+      }
+  }
+   input{
+      color: var(--white-color);
+      border: 1px solid var(--accent-color)!important;
+      &:focus-visible{
+         outline: none;
+      }
+      &::-webkit-input-placeholder{ /* WebKit, Blink, Edge */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+      &:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+         color:    var(--white-color);
+         opacity:  1;
+      }
+      &::-moz-placeholder{ /* Mozilla Firefox 19+ */
+         color:    var(--white-color);
+         opacity:  1;
+      }
+      &:-ms-input-placeholder{ /* Internet Explorer 10-11 */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+      &::-ms-input-placeholder{ /* Microsoft Edge */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+
+      input::placeholder{ /* Most modern browsers support this now. */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+   }
+   
+}
+
+.tungo-subscription-three{
+   max-width: 600px;
+   position: relative;
+   @include max(991px) {
+      max-width: 100%;
+   }
+   button#tungo-search-btn {
+      padding: 13px;
+      margin-top: 0;
+      width: 150px;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      @include max(767px){
+         margin-top: 20px;
+         position: static;
+         width: 100%;
+      }
+  }
+   input{
+      color: var(--white-color);
+      border: 1px solid var(--white-color)!important;
+      padding-right: 165px !important;
+      padding-left: 60px !important;
+      @include max(767px) {
+         padding-right: 24px!important;
+      }
+      &:focus-visible{
+         outline: none;
+      }
+      &::-webkit-input-placeholder{ /* WebKit, Blink, Edge */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+      &:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+         color:    var(--white-color);
+         opacity:  1;
+      }
+      &::-moz-placeholder{ /* Mozilla Firefox 19+ */
+         color:    var(--white-color);
+         opacity:  1;
+      }
+      &:-ms-input-placeholder{ /* Internet Explorer 10-11 */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+      &::-ms-input-placeholder{ /* Microsoft Edge */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+
+      input::placeholder{ /* Most modern browsers support this now. */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+   }
+   
+}
+
+.tungo-search-icon {
+   position: absolute;
+   top: 16px;
+   left: 24px;
+}
+// End v3
+
+.tungo-subscription-four{
+   position: relative;
+   button#tungo-subscription-btn {
+      padding: 13px;
+      margin-top: 0;
+      width: 150px;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      @include max(767px){
+         margin-top: 10px;
+         position: static;
+         width: 100%;
+      }
+  }
+   input{
+      color: var(--heading-color);
+      border: 1px solid var(--accent-color)!important;
+      padding-right: 165px !important;
+      padding-left: 60px !important;
+      @include max(767px) {
+         padding-right: 24px!important;
+      }
+      &:focus-visible{
+         outline: none;
+      }
+      &::-webkit-input-placeholder{ /* WebKit, Blink, Edge */
+         color:    var(--heading-color);
+         opacity: 1;
+      }
+      &:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+         color:    var(--heading-color);
+         opacity:  1;
+      }
+      &::-moz-placeholder{ /* Mozilla Firefox 19+ */
+         color:    var(--heading-color);
+         opacity:  1;
+      }
+      &:-ms-input-placeholder{ /* Internet Explorer 10-11 */
+         color:    var(--heading-color);
+         opacity: 1;
+      }
+      &::-ms-input-placeholder{ /* Microsoft Edge */
+         color:    var(--heading-color);
+         opacity: 1;
+      }
+
+      input::placeholder{ /* Most modern browsers support this now. */
+         color:    var(--heading-color);
+         opacity: 1;
+      }
+   }
+   
+}
+
+
+.tungo-subscription-five{
+   position: relative;
+   max-width: 700px; 
+   margin: 0 auto;
+   button#tungo-subscription-btn {
+      padding: 13px;
+      margin-top: 0;
+      width: 150px;
+      position: absolute;
+      right: 5px;
+      top: 5px;
+      @include max(767px){
+         margin-top: 10px;
+         position: static;
+         width: 100%;
+      }
+  }
+   input{
+      color: var(--white-color);
+      border: 1px solid var(--accent-color)!important;
+      padding-right: 165px !important;
+      @include max(767px) {
+         padding-right: 24px!important;
+      }
+      &:focus-visible{
+         outline: none;
+      }
+      &::-webkit-input-placeholder{ /* WebKit, Blink, Edge */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+      &:-moz-placeholder{ /* Mozilla Firefox 4 to 18 */
+         color:    var(--white-color);
+         opacity:  1;
+      }
+      &::-moz-placeholder{ /* Mozilla Firefox 19+ */
+         color:    var(--white-color);
+         opacity:  1;
+      }
+      &:-ms-input-placeholder{ /* Internet Explorer 10-11 */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+      &::-ms-input-placeholder{ /* Microsoft Edge */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+
+      input::placeholder{ /* Most modern browsers support this now. */
+         color:    var(--white-color);
+         opacity: 1;
+      }
+   }
+
+   p{
+      margin-top: 15px;
+      color: var(--white-color);
+   }
+   
+}
+
+

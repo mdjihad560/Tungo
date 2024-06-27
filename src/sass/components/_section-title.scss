@@ -1,0 +1,196 @@
+.tungo-section-padding{
+  padding: 130px 0;
+  @include max(991px) {
+    padding: 100px 0;
+  }
+  @include max(767px) {
+    padding: 80px 0;
+  }
+}
+.tungo-section-padding2{
+  padding: 130px 0 90px;
+  @include max(991px) {
+    padding: 100px 0 60px;
+  }
+  @include max(767px) {
+    padding: 80px 0 40px;
+  }
+}
+.tungo-section-padding3{
+  padding: 0 0 130px;
+  @include max(991px) {
+    padding: 0 0 100px;
+  }
+  @include max(767px) {
+    padding: 0 0 80px;
+  }
+}
+.tungo-section-padding4{
+  padding: 130px 0 106px;
+  @include max(991px) {
+    padding: 100px 0 76px;
+  }
+  @include max(767px) {
+    padding: 80px 0 56px;
+  }
+}
+.tungo-section-padding5{
+  padding: 130px 0 70px;
+  @include max(991px) {
+    padding: 100px 0 40px;
+  }
+  @include max(767px) {
+    padding: 80px 0 40px;
+  }
+}
+.tungo-section-padding6{
+  padding: 130px 0 0;
+  @include max(991px) {
+    padding: 100px 0 0;
+  }
+  @include max(767px) {
+    padding: 80px 0 0;
+  }
+}
+.tungo-section-padding100{
+  padding: 100px 0;
+  @include max(991px) {
+    padding: 80px 0;
+  }
+  @include max(767px) {
+    padding: 60px 0;
+  }
+}
+
+.pb-80{
+  padding-bottom: 80px;
+}
+.pt-80{
+  padding-top: 80px;
+}
+
+
+.mt-lg-40{
+  @include max(991px) {
+    margin-top: 40px;
+  }
+}
+
+.tungo-default-content{
+  @include max(991px) {
+    text-align: center;
+  }
+  span{
+    display: block;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+  h2{
+    margin-bottom: 20px;
+  }
+  h4{
+    margin-bottom: 30px;
+    @include max(991px) {
+      font-size: 24px;
+    }
+  }
+  p{
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+.ml-85{
+  margin-left: 85px;
+  @include max(1199px) {
+    margin-left: 20px;
+  }
+  @include max(991px) {
+    margin-left: 0;
+  }
+}
+.letter-spacing-reduce{
+  h2{
+    letter-spacing: -3px;
+    @include max(1199px) {
+      letter-spacing: -2px;
+    }
+  }
+}
+// End default content
+.tungo-section-title{
+  &.center{
+    max-width: 715px;
+    margin: 0 auto;
+    text-align: center;
+    @include max(1199px) {
+      max-width: 570px;
+    }
+    @include max(767px) {
+      max-width: 400px;
+    }
+    p{
+      margin-top: 20px;
+    }
+    &.large{
+      max-width: 900px;
+    }
+  }
+  &-des{
+    max-width: 445px;
+    @include max(991px) {
+      max-width: 100%;
+    }
+    p{
+      @include max(991px) {
+        margin-top: 20px;
+      }
+    }
+  }
+  padding-bottom: 80px;
+  @include max(991px) {
+    padding-bottom: 60px;
+    text-align: center;
+    max-width: 570px;
+    margin: 0 auto;
+  }
+  
+  @include max(767px) {
+    max-width: 400px;
+    padding-bottom: 40px;
+  }
+  span{
+    display: block;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+  }
+  p{
+    font-size: 20px;
+    line-height: 26px;
+  }
+  &.light-color{
+    h2, p, span{
+      color: var(--white-color);
+    }
+  }
+}
+
+.responsive-mt40{
+  @include max(991px) {
+    margin-top: 40px;
+  }
+}
+.tungo-title-btn {
+  @include max(991px) {
+    width: 100%;
+    margin-top: 30px;
+  }
+  
+}
+
+.position_sticky {
+  position: sticky;
+  top: 130px;
+  @include max(991px) {
+    position: inherit;
+  }
+}

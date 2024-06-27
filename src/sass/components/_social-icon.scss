@@ -1,0 +1,144 @@
+.tungo-social-icon-box{
+  ul{
+    li{
+      margin-right: 15px;
+      display: inline-block;
+      &:last-child{
+        margin-right: 0;
+      }
+      a{
+        width: 35px;
+        height: 35px;
+        display: flex;
+        border-radius: 50px;
+        align-items: center;
+        transition: all 0.4s;
+        justify-content: center;
+        background-color: rgba(254, 250, 246, .1);
+        &:hover{
+          background-color: var(--accent-bg);
+        }
+        &:hover path{
+          fill: var(--heading-color);
+        }
+        svg path{
+          transition: all 0.4s;
+          fill: var(--white-color);
+        }
+        i{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+  &.normal-radius{
+    ul{
+      li{
+        a{
+          border-radius: 3px;
+          background-color: rgba(218, 192, 163, .2);
+          &:hover{
+            background-color: var(--accent-bg);
+          }
+
+        }
+      }
+    }
+  }
+  &.dark-social{
+    ul{
+      li{
+        a{
+          background-color: rgba(16, 44, 87, .1);
+          &:hover{
+            background-color: var(--blue-bg);
+          }
+          &:hover path{
+            fill: var(--accent-color);
+          }
+          svg{
+            path{
+              fill: var(--heading-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  &.social-style-two{
+    ul{
+      li{
+        display: block;
+        margin-right: 0;
+        margin-bottom: 12px;
+        &:last-child{
+          margin-bottom: 0;
+        }
+        a{
+          background-color: var(--accent-bg);
+          &:hover{
+            background-color: var(--blue-bg);
+          }
+          &:hover path{
+            fill: var(--white-color);
+          }
+          svg{
+            path{
+              fill: var(--heading-color);
+            }
+          }
+        }
+      }
+    }
+  }
+  &.social-style-three{
+    ul{
+      li{
+        display: inline-block;
+        margin: 0 7px;
+        &:first-child{
+          margin-left: 0;
+        }
+        &:last-child{
+          margin-right: 0;
+        }
+        a{
+          border-radius: 3px;
+          background-color: var(--accent-bg);
+          &:hover{
+            background-color: var(--blue-bg);
+          }
+          &:hover path{
+            fill: var(--white-color);
+          }
+          svg{
+            path{
+              fill: var(--heading-color);
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+.tungo-social-icon-box{
+  &.position-style-one{
+    position: absolute;
+    top: 20px;
+    right: 0;
+    opacity: 0;
+    transition: all 0.3s;
+  }
+  &.position-style-two{
+    position: absolute;
+    bottom: 0;
+    opacity: 0;
+    width: 100%;
+    z-index: 3;
+    transition: all 0.4s;
+    text-align: center;
+  }
+  
+}
+

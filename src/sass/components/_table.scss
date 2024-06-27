@@ -1,0 +1,109 @@
+.tungo-apartments-table{
+  @include max(1199px) {
+    overflow-x: scroll;
+  }
+  table{
+    width: 100%;
+    thead{
+      tr{
+        background-color: var(--accent-bg);
+        th{
+          padding: 18px;
+          text-align: center;
+          font-weight: 700;
+          white-space: nowrap;
+          &:first-child{
+            padding-left: 30px;
+            text-align: left;
+          }
+          &:last-child{
+            padding-right: 30px;
+            text-align: right;
+          }
+        }
+      }
+    }
+    tbody{
+      tr{
+        border-bottom: 1px solid var(--off-white-bg);
+        td{
+          font-size: 28px;
+          padding: 40px;
+          text-align: center;
+          font-weight: 700;
+          white-space: nowrap;
+          font-family: $heading-font;
+          @include max(767px) {
+            font-size: 24px;
+          }
+          &:first-child{
+            padding-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
+// End v6
+
+.tungo-floor-table{
+  @include max(1199px) {
+    overflow-x: scroll;
+  }
+  table{
+    width: 100%;
+    thead{
+      tr{
+        background-color: var(--blue-bg);
+        th{
+          padding: 18px;
+          text-align: center;
+          font-weight: 700;
+          white-space: nowrap;
+          color: var(--white-color);
+          
+          &:first-child{
+            padding-left: 30px;
+            text-align: left;
+          }
+          &:last-child{
+            padding-right: 30px;
+            text-align: right;
+          }
+        }
+      }
+    }
+    tbody{
+      tr{
+        border-bottom: 1px solid var(--off-white-bg);
+        td{
+          font-size: 28px;
+          padding: 24px;
+          text-align: center;
+          font-weight: 700;
+          white-space: nowrap;
+          font-family: $heading-font;
+          @include max(767px) {
+            font-size: 24px;
+          }
+          &:first-child{
+            padding-left: 30px;
+            text-align: left;
+          }
+          &:last-child{
+            padding-right: 00px;
+            text-align: right;
+          }
+          a{
+            font-size: 28px;
+            font-family: $heading-font;
+            color: var(--body-color);
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
+}
+
+// End 10

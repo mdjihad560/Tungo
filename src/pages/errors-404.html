@@ -1,0 +1,24 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "About Us" %}
+ {% block content %}
+
+{% include "../templates/layout/header-footer/main-header.html" %} 
+
+<div class="tungo-errors-section" style="background-image: url('assets/images/breadcrumb/error-bg.png')">
+  <div class="container">
+      <div class="tungo-errors-content">
+        <div class="tungo-errors-logo">
+          <img src="assets/images/breadcrumb/404.png" alt="">
+        </div>
+        <h2>We're coming! With something special for you. Stay with us</h2>
+        <div class="tungo-extra-mt">
+          <a class="tungo-default-btn" href="index.html">Go To Homepage</a>
+        </div>
+      </div>
+  </div>
+</div>
+
+
+{% include "../templates/layout/header-footer/main-footer.html" %} 
+  
+{% endblock %}

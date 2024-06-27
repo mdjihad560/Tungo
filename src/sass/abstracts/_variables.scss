@@ -1,0 +1,51 @@
+// fonts variable
+$body-font: "Open Sans", sans-serif!default;
+$heading-font: "Old Standard TT", serif !default;
+
+// color variable
+:root {
+  --heading-color: #102C57;
+  --body-color: #102C57;
+  --accent-color: #DAC0A3;
+  --white-color: #FEFAF6;
+  --white-bg: #FEFAF6;
+  --blue-bg: #102C57;
+  --accent-bg: #DAC0A3;
+  --off-white-bg: #EADBC8;
+}
+
+$colors: (
+ 
+);
+
+$bodyfontScale: (
+  xl: (
+    20: 20px,
+    lineheight: 32px,
+  ),
+  lg: (
+    18: 18px,
+    lineheight: 28px,
+  ),
+  md: (
+    16: 16px,
+    lineheight: 24px,
+  ),
+  xs: (
+    14: 14px,
+    lineheight: 22px,
+  ),
+  xss: (
+    12: 12px,
+    lineheight: 20px,
+  ),
+);
+
+// button font size
+$button_font_size: 18px;
+$buton_line_height: 24px;
+$buton_border_radius: 3px;
+$button_padding: 18px 29px;
+$button_font_weight: 700;
+$button_font_family: $body-font;
+

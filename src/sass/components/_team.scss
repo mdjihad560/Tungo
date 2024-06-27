@@ -1,0 +1,126 @@
+.tungo-team{
+  &-wrap{
+    margin-bottom: 24px;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: all 0.4s;
+    background-color: var(--white-bg);
+    &:hover{
+      box-shadow: 0px 4px 80px 0px rgba(16, 44, 87, 0.08);
+    }
+    &:hover .tungo-team-thumb::before{
+      opacity: 1;
+    }
+    &:hover .position-style-one{
+      opacity: 1;
+      right: 20px;
+      visibility: visible;
+    }
+    &:hover .position-style-two{
+      opacity: 1;
+      bottom: 24px;
+      visibility: visible;
+    }
+    &:hover .tungo-team-thumb img{
+      transform: scale(1.1);
+    }
+  }
+  &-thumb{
+    position: relative;
+    overflow: hidden;
+    &:before{
+      content: "";
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      opacity: 0;
+      transition: all 0.5s;
+      position: absolute;
+      mix-blend-mode: multiply;
+      background: linear-gradient(180deg, rgba(16, 44, 87, 0) 48%, #102C57 100%);
+
+    }
+    img{
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: all 0.7s;
+    }
+  }
+  &-data{
+    padding: 20px;
+    h4{
+      margin-bottom: 5px;
+    }
+  }
+ 
+}
+
+// End team all
+
+.tungo-team-info-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+  padding-top: 50px;
+  text-align: left;
+  
+}
+.tungo-team-top{
+  padding-bottom: 80px;
+  @include max(991px) {
+    padding-bottom: 60px;
+  }
+}
+.tungo-team-single-thumb{
+  @include max(991px) {
+    margin-bottom: 40px;
+  }
+}
+
+.tungo-team-details{
+  &-wrap {
+    padding-top: 80px;
+    @include max(991px) {
+      padding-top: 60px;
+    }
+  }
+  &-item{
+    margin-bottom: 50px;
+    &:last-child{
+      margin-bottom: 0;
+    }
+    @include max(991px) {
+      margin-bottom: 30px;
+    }
+    h3{
+      margin-bottom: 15px;
+    }
+    ul{
+      li{
+        position: relative;
+        padding-left: 15px;
+        &:last-child{
+          margin-bottom: 24px;
+        }
+        &::before{
+          content: "";
+          left: 0;
+          top: 10px;
+          width: 4px;
+          height: 4px;
+          position: absolute;
+          border-radius: 10px;
+          background-color: var(--blue-bg);
+        }
+      }
+    }
+  }
+  
+}
+
+// End team details

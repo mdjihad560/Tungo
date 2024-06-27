@@ -1,0 +1,243 @@
+.tungo-diverder {
+  height: 1px;
+  background-color: var(--off-white-bg);
+  &.white_color{
+    background-color: rgba(254, 250, 246, .1);
+  }
+}
+
+.tungo-counter{
+  &-wrap{
+    gap: 40px;
+    display: flex;
+    justify-content: space-between;
+    @include max(991px) {
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    @include max(767px) {
+      justify-content: center;
+    }
+  }
+  &-data{
+    p{
+      font-size: 20px;
+      @include max(767px) {
+        font-size: 18px;
+      }
+    }
+  }
+  &-number{
+    gap: 24px;
+    display: flex;
+    font-size: 80px;
+    margin-bottom: 15px;
+    font-weight: 700;
+    font-size: 80px;
+    line-height: 1em;
+    letter-spacing: -2px;
+    align-items: flex-start;
+    font-family: $heading-font;
+    &.light-color{
+      color: var(--accent-color);
+    }
+    &.light-color2{
+      color: var(--white-color);
+    }
+    @include max(1400px) { 
+      font-size: 70px;
+    }
+    @include max(991px) {
+      justify-content: center;
+    }
+    @include max(1199px) { 
+      font-size: 60px;
+    }
+ 
+ 
+    
+  }
+  
+  
+}
+.mw-500{
+  max-width: 500px;
+  @include max(991px) {
+    margin: 0 auto;
+  }
+}
+// End v1
+.tungo-counter{
+  &-wrap2{
+    gap: 40px;
+    display: flex;
+    justify-content: space-between;
+    @include max(991px) {
+      flex-wrap: wrap;
+      text-align: center;
+    }
+    @include max(767px) {
+      justify-content: center;
+    }
+  }
+  &-data2{
+    position: relative;
+    h2{
+      color: var(--accent-color);
+    }
+    p{
+      margin: 0;
+      font-size: 20px;
+      color: var(--accent-color);
+      @include max(767px) {
+        font-size: 18px;
+      }
+    }
+    img{
+      top: -20px;
+      left: -35px;
+      position: absolute;
+      @include max(1199px) {
+        width: 90px;
+      }
+      @include max(991px) {
+        left: 15px;
+      }
+    }
+    &::before{
+      content: "";
+      right: -43%;
+      top: 50%;
+      width: 1px;
+      height: 50px;
+      position: absolute;
+      transform: translateY(-50%);
+      background-color: var(--off-white-bg);
+      @include max(1399px) {
+        right: -30%;
+      }
+      @include max(1199px) {
+        right: -20%;
+      }
+      @include max(991px) {
+        right: -30%;
+      }
+    }
+    &:last-child::before{
+      content: none;
+    }
+    @include max(991px) {
+      &:nth-child(3)::before{
+        content: none;
+      }
+    }
+    @include max(767px) {
+      &::before{
+        content: none;
+      }
+    }
+    
+  }
+}
+
+// End v2
+
+.tungo-counter{
+  &-wrap3{
+    gap: 40px;
+    display: flex;
+    justify-content: space-between;
+    @include max(991px) {
+      flex-wrap: wrap;
+      text-align: center;
+      justify-content: center;
+    }
+    @include max(767px) {
+      justify-content: center;
+    }
+  }
+  &-data3{
+    position: relative;
+    h2{
+      color: var(--white-color);
+        gap: 24px;
+        display: flex;
+        margin-bottom: 15px;
+        align-items: flex-start;
+        @include max(991px) {
+          justify-content: center;
+        }
+    }
+    p{
+      margin: 0;
+      font-size: 20px;
+      color: var(--white-color);
+      @include max(767px) {
+        font-size: 18px;
+      }
+    }
+
+    &::before{
+      content: "";
+      right: -33%;
+      top: 50%;
+      width: 1px;
+      height: 50px;
+      position: absolute;
+      transform: translateY(-50%);
+      background-color: var(--accent-color);
+      @include max(1399px) {
+        right: -15%;
+      }
+      @include max(1199px) {
+        right: 0%;
+      }
+      @include max(991px) {
+        content: none;
+      }
+    }
+    &:last-child::before{
+      content: none;
+    }
+    @include max(991px) {
+      &:nth-child(3)::before{
+        content: none;
+      }
+    }
+    @include max(767px) {
+      &::before{
+        content: none;
+      }
+    }
+    
+  }
+}
+// End v3
+.tungo-counter{
+  &-wrap4{
+    width: 100%;
+    left: -30px;
+    bottom: 30px;
+    display: flex;
+    padding: 24px;
+    max-width: 385px;
+    border-radius: 5px;
+    position: absolute;
+    justify-content: space-between;
+    background-color: var(--blue-bg);
+    @include max(575px){
+      left: 0;
+      bottom: 0;
+    }
+  }
+  &-data4{
+    h2, p{
+      color: var(--accent-color);
+    }
+    p{
+      font-size: 16px;
+      font-family: $heading-font;
+    }
+    
+  }
+}

@@ -1,0 +1,229 @@
+{% extends "layout/layout.html" %}
+{% set page_title = "Blog Grid" %}
+ {% block content %}
+
+{% include "../templates/layout/header-footer/main-header.html" %} 
+
+<div class="breadcumb-wrapper" style="background-image: url(assets/images/breadcrumb/breadcrumb.png)">
+  <div class="container">
+    {% include "../templates/components/breadcrumbs/breadcrumbs.html" %}
+  </div>
+</div>
+<!-- End breadcrumb -->
+
+<section class="tungo-section-padding blog-grid">
+  <div class="container">
+      <div class="row">
+          <div class="col-lg-8">
+            <div class="row">
+              <div class="col-md-6">
+                <div class="tungo-blog blog-single has-post-thumbnail">
+                  <div class="blog-img">
+                      <a href="blog-details.html"><img src="assets/images/blog/blog8.png" alt="Blog Image"></a>
+                  </div>
+                  <div class="blog-content">
+                      <div class="blog-meta">
+                          <a href="blog.html"><img src="assets/images/blog/label.svg" alt="">Real Estate</a>
+                          <a href="blog.html"><img src="assets/images/blog/calendar.svg" alt="">June 15, 2024</a>
+                      </div>
+                      <h4 class="blog-title"><a href="blog-details.html">Comprehensive 12-step guide for first-time property buyers</a></h4>
+                      <p class="blog-text">We all dream of buying our own house and transforming it into a home.....</p>
+                      <a href="blog-details.html" class="blog-btns">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tungo-blog blog-single has-post-thumbnail">
+                  <div class="blog-img">
+                      <a href="blog-details.html"><img src="assets/images/blog/blog9.png" alt="Blog Image"></a>
+                  </div>
+                  <div class="blog-content">
+                      <div class="blog-meta">
+                          <a href="blog.html"><img src="assets/images/blog/label.svg" alt="">Property</a>
+                          <a href="blog.html"><img src="assets/images/blog/calendar.svg" alt="">June 10, 2024</a>
+                      </div>
+                      <h4 class="blog-title"><a href="blog-details.html">Top real estate trends in 2024 that will rule the future</a></h4>
+                      <p class="blog-text">The real estate market offers something for every type of investor out there...</p>
+                      <a href="blog-details.html" class="blog-btns">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tungo-blog blog-single has-post-thumbnail">
+                  <div class="blog-img">
+                      <a href="blog-details.html"><img src="assets/images/blog/blog10.png" alt="Blog Image"></a>
+                  </div>
+                  <div class="blog-content">
+                      <div class="blog-meta">
+                          <a href="blog.html"><img src="assets/images/blog/label.svg" alt="">Apartment</a>
+                          <a href="blog.html"><img src="assets/images/blog/calendar.svg" alt="">June 25, 2024</a>
+                      </div>
+                      <h4 class="blog-title"><a href="blog-details.html">Discover trending designs tips to enhance space!</a></h4>
+                      <p class="blog-text">Home decor trends change as architects and interior designers introduce...</p>
+                      <a href="blog-details.html" class="blog-btns">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tungo-blog blog-single has-post-thumbnail">
+                  <div class="blog-img">
+                      <a href="blog-details.html"><img src="assets/images/blog/blog11.png" alt="Blog Image"></a>
+                  </div>
+                  <div class="blog-content">
+                      <div class="blog-meta">
+                          <a href="blog.html"><img src="assets/images/blog/label.svg" alt="">Apartment</a>
+                          <a href="blog.html"><img src="assets/images/blog/calendar.svg" alt="">June 11, 2024</a>
+                      </div>
+                      <h4 class="blog-title"><a href="blog-details.html">The first time investor's guide to commercial property</a></h4>
+                      <p class="blog-text">Commercial real estate is an excellent investment opportunity for those...</p>
+                      <a href="blog-details.html" class="blog-btns">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tungo-blog blog-single has-post-thumbnail">
+                  <div class="blog-img">
+                      <a href="blog-details.html"><img src="assets/images/blog/blog12.png" alt="Blog Image"></a>
+                  </div>
+                  <div class="blog-content">
+                      <div class="blog-meta">
+                          <a href="blog.html"><img src="assets/images/blog/label.svg" alt="">Property</a>
+                          <a href="blog.html"><img src="assets/images/blog/calendar.svg" alt="">June 17, 2024</a>
+                      </div>
+                      <h4 class="blog-title"><a href="blog-details.html">6 Main key factors that affect commercial property value</a></h4>
+                      <p class="blog-text">Every commercial real estate investor aims to get the best possible...</p>
+                      <a href="blog-details.html" class="blog-btns">Read More</a>
+                  </div>
+                </div>
+              </div>
+              <div class="col-md-6">
+                <div class="tungo-blog blog-single has-post-thumbnail">
+                  <div class="blog-img">
+                      <a href="blog-details.html"><img src="assets/images/blog/blog13.png" alt="Blog Image"></a>
+                  </div>
+                  <div class="blog-content">
+                      <div class="blog-meta">
+                          <a href="blog.html"><img src="assets/images/blog/label.svg" alt="">Property</a>
+                          <a href="blog.html"><img src="assets/images/blog/calendar.svg" alt="">June 27, 2024</a>
+                      </div>
+                      <h4 class="blog-title"><a href="blog-details.html">How to negotiate commercial lease: Tips for negotiation</a></h4>
+                      <p class="blog-text">Navigating the complexities of commercial lease can seem daunting for business...</p>
+                      <a href="blog-details.html" class="blog-btns">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tungo-pagination">
+              <ul>
+                <li>
+                  <a class="pagi-btn" href="#">
+                    <svg width="19" height="18" viewBox="0 0 19 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4.67325 7.84298L10.8799 1.63636L9.24351 0L0.243458 9.00007L9.24351 18L10.8799 16.3636L4.67325 10.1572H18.7568V7.84298H4.67325Z" fill="white"/>
+                    </svg>                          
+                  </a>
+                </li>
+                  <li><a class="current" href="#">1</a></li>
+                  <li><a href="#">2</a></li>
+                  <li><a href="#">3</a></li>
+                  <li>
+                    <a class="pagi-btn" href="#">
+                      <svg width="20" height="18" viewBox="0 0 20 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M14.8268 7.84298L8.62014 1.63636L10.2565 0L19.2565 9.00007L10.2565 18L8.62014 16.3636L14.8268 10.1572H0.743164V7.84298H14.8268Z" fill="#102C57"/>
+                      </svg>
+                    </a>
+                  </li>
+              </ul>
+          </div>
+          </div>
+          <div class="col-lg-4">
+              <aside class="sidebar-area">
+                  <div class="widget widget_search">
+                      <h4 class="widget_title">Search</h4>
+                      <form class="search-form">
+                          <input type="search" placeholder="Type to search...">
+                          <button type="submit"><img src="assets/images/blog/search.svg" alt=""></button>
+                      </form>
+                  </div>
+                  <div class="widget widget_categories">
+                    <h4 class="widget_title">Categories</h4>
+                    <ul>
+                        <li>
+                            <a href="blog.html">Property</a>
+                            <span>(24)</span>
+                        </li>
+                        <li>
+                            <a href="blog.html">Architecture</a>
+                            <span>(07)</span>
+                        </li>
+                        <li>
+                            <a href="blog.html">Real Estate</a>
+                            <span>(18)</span>
+                        </li>
+                        <li>
+                            <a href="blog.html">News & Tips</a>
+                            <span>(05)</span>
+                        </li>
+                        <li>
+                            <a href="blog.html">Uncategorized</a>
+                            <span>(19)</span>
+                        </li>
+                    </ul>
+                  </div>
+                  <div class="widget">
+                      <h4 class="widget_title">Recent Posts</h4>
+                      <div class="recent-post-wrap">
+                          <div class="recent-post">
+                              <div class="media-img">
+                                  <a href="blog-details.html"><img src="assets/images/blog/recent-post1.png" alt="Blog Image"></a>
+                              </div>
+                              <div class="media-body">
+                                  <div class="recent-post-meta">
+                                    <a href="blog.html"><img src="assets/images/blog/calendar.svg" alt="">June 15, 2024</a>
+                                  </div>
+                                  <h6 class="post-title"><a class="text-inherit" href="blog-details.html">Buying a property? Ignore interest rates</a></h6>
+                              </div>
+                          </div>
+                          <div class="recent-post">
+                            <div class="media-img">
+                                <a href="blog-details.html"><img src="assets/images/blog/recent-post2.png" alt="Blog Image"></a>
+                            </div>
+                            <div class="media-body">
+                                <div class="recent-post-meta">
+                                  <a href="blog.html"><img src="assets/images/blog/calendar.svg" alt="">June 15, 2024</a>
+                                </div>
+                                <h6 class="post-title"><a class="text-inherit" href="blog-details.html">European countries to buy €1 homes</a></h6>
+                            </div>
+                          </div>
+                          <div class="recent-post">
+                            <div class="media-img">
+                                <a href="blog-details.html"><img src="assets/images/blog/recent-post3.png" alt="Blog Image"></a>
+                            </div>
+                            <div class="media-body">
+                                <div class="recent-post-meta">
+                                  <a href="blog.html"><img src="assets/images/blog/calendar.svg" alt="">June 15, 2024</a>
+                                </div>
+                                <h6 class="post-title"><a class="text-inherit" href="blog-details.html">5 eco-friendly homes for Earth Day</a></h6>
+                            </div>
+                          </div>
+                      </div>
+                  </div>
+                  <div class="widget widget_tag_cloud">
+                      <h4 class="widget_title">Popular Tags</h4>
+                      <a href="">Apartment</a>
+                      <a href="">Building</a>
+                      <a href="">Lifestyle</a>
+                      <a href="">Architecture</a>
+                      <a href="">Design</a>
+                  </div>
+              </aside>
+          </div>
+      </div>
+  </div>
+</section>
+
+
+
+
+{% include "../templates/layout/header-footer/main-footer.html" %} 
+  
+{% endblock %}

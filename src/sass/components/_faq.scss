@@ -1,0 +1,142 @@
+
+
+.tungo-accordion{
+  &-item{
+    padding: 22px;
+    position: relative;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    transition: all 0.4s;
+    border: 1px solid var(--accent-color);
+    &:last-child{
+      margin-bottom: 0;
+    }
+    &.open .tungo-accordion-header::before{
+      transform: rotate(180deg);
+    }
+    &.open{
+      background-color: var(--accent-bg);
+      .tungo-accordion-body{
+        display: block;
+      }
+    }
+  }
+  &-header{
+    display: flex;
+    gap: 24px;
+    align-items: flex-end;
+    cursor: pointer;
+    position: relative;
+    h4{
+      @include max(767px) {
+        font-size: 24px;
+      }
+    }
+      @include max(767px) {
+        padding-right: 20px;
+      }
+    &::before{
+      content: "";
+      position: absolute;
+      right: 0;
+      transition: all .4s;
+      background-size: 20px;
+      background-position: center;
+      width: 20px;
+      height: 20px;
+      top: 10px;
+      z-index: 2;
+      background-repeat: no-repeat;
+      background-image: url(../images/icon/arrow-bottom.svg);
+      @include max(767px) {
+        top: 5px;
+      }
+    }
+   
+  }
+  &-body{
+    display: none;
+    padding-top: 15px;
+    padding-left: 70px;
+    &.default{
+      display: block;
+    }
+    @include max(991px) {
+      padding: 24px 0 0;
+    }
+  }
+}
+
+// End v1
+
+
+
+.tungo-accordion{
+  &-item2{
+    padding: 22px 0px;
+    position: relative;
+    border-radius: 0;
+    transition: all 0.4s;
+    border-bottom: 1px solid var(--accent-color);
+    &:first-child{
+      padding-top: 0;
+    }
+    &:last-child{
+      padding-bottom: 0;
+      border: 0;
+    }
+    &.open .tungo-accordion-header2::before{
+      transform: rotate(180deg);
+    }
+    &.open{
+      .tungo-accordion-body2{
+        display: block;
+      }
+    }
+  }
+  &-header2{
+    display: flex;
+    gap: 24px;
+    align-items: flex-end;
+    cursor: pointer;
+    position: relative;
+    h4{
+      padding-right: 20px;
+      @include max(767px) {
+        font-size: 24px;
+      }
+    }
+      @include max(767px) {
+        padding-right: 20px;
+      }
+    &::before{
+      content: "";
+      position: absolute;
+      right: 0;
+      transition: all .4s;
+      background-size: 20px;
+      background-position: center;
+      width: 20px;
+      height: 20px;
+      top: 5px;
+      z-index: 2;
+      background-repeat: no-repeat;
+      background-image: url(../images/icon/arrow-bottom.svg);
+      @include max(767px) {
+        top: 5px;
+      }
+    }
+   
+  }
+  &-body2{
+    display: none;
+    padding-top: 15px;
+    &.default{
+      display: block;
+    }
+    @include max(991px) {
+      padding: 24px 0 0;
+    }
+  }
+}
+// End v3

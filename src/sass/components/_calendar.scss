@@ -1,0 +1,92 @@
+
+
+// datepicker
+
+.form-container {
+  position: relative;
+  border-radius: 3px;
+  align-items: center;
+  display: flex;
+  z-index: 0;
+  justify-content: center;
+  border: 1px solid var(--accent-color);
+  background-color: var(--white-bg);
+  img{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: -1;
+  }
+}
+
+
+.form-container input {
+  background-color: transparent !important;
+  border: none;
+  padding: 15px 25px;
+  cursor: pointer;
+  &:focus{
+    border: none!important;
+  }
+}
+.form-container .calendar-popup {
+  background-color: #fff;
+  border-radius: 4px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+  opacity: 0;
+  padding: 20px;
+  position: absolute;
+  top: calc(100% + 5px);
+  transition: all 0.1s linear;
+  width: 100%;
+  visibility: hidden;
+}
+.form-container.open .calendar-popup {
+  opacity: 1;
+  visibility: visible;
+}
+.form-container .calendar-popup .month-and-year {
+  align-items: center;
+  display: flex;
+  text-align: center;
+  text-transform: uppercase;
+  padding-bottom: 15px;
+}
+.form-container .calendar-popup .month-and-year h4 {
+  width: 100%;
+  font-size: 20px;
+  text-transform: capitalize;
+}
+.form-container .calendar-popup .button {
+  background-color: transparent;
+  border: none;
+  font-weight: bold;
+  outline: none;
+  position: absolute;
+  top: 15px;
+}
+.form-container .calendar-popup .button:hover {
+  cursor: pointer;
+}
+.form-container .calendar-popup .button.prev {
+  left: 20px;
+}
+.form-container .calendar-popup .button.next {
+  right: 20px;
+}
+.form-container .calendar-popup table {
+  font-size: 12px;
+  width: 100%;
+}
+.form-container .calendar-popup table tr {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  padding: 5px 0;
+}
+.form-container .calendar-popup table tr th,
+.form-container .calendar-popup table tr td {
+  text-align: center;
+}
+.form-container .calendar-popup table .day:hover {
+  cursor: pointer;
+}
